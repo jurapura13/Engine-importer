@@ -1,4 +1,4 @@
-### ENGINE IMPORTER FOR ANGE-YAGHI's ENGINE-SIM ###
+### One-Click Engine Importer for ange-yaghi's Engine-sim ###
 
 ### Instalation:
 Unzip the contents of the .ZIP archive into /assets/engines/ folder.
