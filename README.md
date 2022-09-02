@@ -7,8 +7,7 @@ You should have the following:
 <br>/assets/engines/Engine-importer.exe
 
 ### Usage:
-0. Back up your main.mr if you need it, it gets overwritten.
-0.1. Either use the included .mr file or delete it. There should be only one file in the /new/ folder.
+0. Back up your main.mr if you need it, it gets overwritten.<br>0.1. Either use the included .mr file or delete it. There should be only one file in the /new/ folder.
 1. Put the engine you wish to import into the /new/ folder.
 2. Run the Engine-importer.exe.
 3. The engine has been imported, enjoy your game!
