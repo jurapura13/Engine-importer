@@ -2,13 +2,15 @@ import os
 import re
 import shutil
 
-# find first public node and get its name
+# find public node, if there is "alias output __out: engine;" in the next line, get public node name
 def get_engine_name(filename):
     with open(filename, 'r') as f:
         for line in f:
             if re.match(r'^public node', line):
-                return line.split()[2]
-
+                next_line = f.readline()
+                if re.match(r'^\s*alias output __out: engine;', next_line):
+                    return line.split()[2]
+                
 # find public node, if there is "alias output __out: vehicle;" in the next line, get public node name
 def get_vehicle_name(filename):
     with open(filename, 'r') as f:
