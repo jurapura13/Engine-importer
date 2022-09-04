@@ -2,6 +2,7 @@ import os
 import re
 import shutil
 
+# find first public node and get its name
 def get_engine_name(filename):
     with open(filename, 'r') as f:
         for line in f:
@@ -26,6 +27,7 @@ def get_transmission_name(filename):
                 if re.match(r'^\s*alias output __out: trans;', next_line):
                     return line.split()[2]
 
+# Create main.mr with all information gathered
 def create_main_mr(filename, engine_name, vehicle_name, transmission_name):
     with open('../main.mr', 'w') as f:
         f.write('import "engine_sim.mr"\n')
@@ -39,6 +41,18 @@ def create_main_mr(filename, engine_name, vehicle_name, transmission_name):
             f.write('set_transmission({}())\n'.format(transmission_name))
 
 def main():
+# Check if there is a "./new/" folder, if not create it, print message to put .mr file in new folder, and exit program
+    if not os.path.exists('./new/'):
+        os.makedirs('./new/')
+        print('Please put .mr file in new folder')
+        exit()
+
+# Check if there is a .mr file in new folder, if not print message to put .mr file in new folder, and exit program
+    if not os.listdir('./new/'):
+        print('Please put .mr file in new folder')
+        exit()
+
+# Check if there is a .mr file in new folder, if there is, move it to current folder, get engine, vehicle, and transmission name, and create main.mr file
     for filename in os.listdir('./new/'):
         if filename.endswith('.mr'):
             shutil.move('./new/{}'.format(filename), './')
