@@ -1,13 +1,8 @@
 ### One-Click Engine Importer for [ange-yaghi's Engine-sim](https://github.com/ange-yaghi/engine-sim) ###
 
 ### Instalation:
-Initial version:
-- Unzip the contents of the .ZIP archive into /assets/engines/ folder.
-- You should have the following:
-- /assets/engines/new/72cc.mr
-- /assets/engines/Engine-importer.exe
 
-Version 2.0:
+Version 2.1:
 - Just download your preffered file format (Linux executable, Windows executable, Python script) and run it from `/engine-sim-build_x_y_z/assets/engines/`
 
 ### Usage:
