@@ -8,7 +8,7 @@ Version 2.1:
 ### Usage:
 0. Back up your main.mr if you need it, it gets overwritten.
 1. Put the engine you wish to import into the /new/ folder.
-2. Run the Engine-importer.exe.
+2. Run the Engine-importer executable/script.
 3. The engine has been imported, enjoy your game!
 
 ### Troubleshooting
